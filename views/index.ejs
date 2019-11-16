@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<br><br>
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Add Movie</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/movie/add">
+                <label>Movie Name</label><br>
+                <input type="text" name="title"><br><br>
+                <label>Year</label><br>
+                <input type="text" name="year"><br><br>
+                <input type="submit" class="btn btn-lg btn-block btn-outline-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Add Actor</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/actor/add">
+                <label>Actor's Name</label><br>
+                <input type="text" name="name"><br><br>
+                <label>Actor's Age</label><br>
+                <input type="text" name="name"><br><br>
+                <input type="submit" class="btn btn-lg btn-block btn-outline-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Add Actor to Movie</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/movie/actor/add">
+                <label>Movie Name</label><br>
+                <input type="text" name="title"><br><br>
+                <label>Actor Name</label><br>
+                <input type="text" name="name"><br><br>
+                <input type="submit" class="btn btn-lg btn-block btn-outline-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck mb-2 text-center">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h1>Movies</h1>
+            <ul>
+                <% movies.forEach(function(movie) { %>
+                            <li> <%= movie.title %> </li>
+                <% }) %>
+            </ul>
+
+            <h1>Actors</h1>
+            <ul>
+                <% persons.forEach(function(actor) { %>
+                    <li><%= actor.name %></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>
