@@ -77,9 +77,10 @@ app.post('/movie/add', function(req, res){
 
 app.post('/actor/add', function(req, res){
     var name = req.body.name;
+    var year =req.body.year;
 
     session
-        .run('CREATE(n: Person {name: {nameParam}}) RETURN n.name', {nameParam: name})
+        .run('CREATE(n: Person {name: {nameParam}, year:{yearParam}})  RETURN n.name', {nameParam: name, yearParam: year})
         .then(function (result) {
             res.redirect('/');
 
