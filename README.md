@@ -2,7 +2,7 @@
 
 <h1> How-to </h1>
 <ul>
-  <li>Create a Graph on your Neo4j datagram
+  <li>Create a  new Graph on your Neo4j datagram
   <li>Extract files into C:\Directory
   <li>Run Command Line as SU
   <li>Run <strong>'npm install nodemon -g'</strong>; <strong>'nodemon'</strong> commands
