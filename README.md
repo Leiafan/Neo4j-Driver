@@ -1,6 +1,6 @@
 # neo4j-driver
 
-<h1> How to </h1>
+<h1> How-to </h1>
 <ul>
   <li>Create a Graph on your Neo4j datagram
   <li>Extract files
